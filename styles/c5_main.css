@@ -1,0 +1,123 @@
+/* custom property */
+
+* {
+margin: 0;
+padding: 0;
+}
+
+:root {
+	--global-color-1: #800000;
+}
+
+/* the styles for the elements */
+body {
+	font-family: Arial, Helvetica, sans-serif;
+    font-size: 100%;
+    margin-left: 100px; /* Adjust this value to move the content more to the left */
+    width: 600px;
+    margin-top: 0;
+    margin-bottom: 0;
+    border: solid #931420;
+    background-color: #fffded;
+}
+
+a:focus, a:hover {
+	font-style: italic;
+}
+
+/* the styles for the header */
+
+header {
+	border-bottom: solid #931420;
+	padding-top: 1.5em;
+	padding-bottom: 2em;
+	padding-right: 5em;
+	text-align: center;
+	background: linear-gradient(#f6bb73 0%, #f6bb73 30%, white 50%, #f6bb73 80%, #f6bb73 100%);
+	border: solid #931420;
+  	border-width: 0 0 1px 0;
+  	padding: 20px;
+  }
+  
+  header h2 {
+	font-size: 175%;
+	color: var(--global-color-1);
+	display: inline-block;
+  }
+  
+  header img {
+	vertical-align: middle;
+	padding-right: 1em;
+  }
+
+h1 {
+
+	border-top: solid #931420;
+	border-bottom: solid #931420;
+
+}
+
+header h3 {
+	font-size: 130%;
+	font-style: italic;
+	
+}
+
+.shadow {
+	text-shadow: 2px 2px 2px var(--global-color-1);
+}
+/* the styles for the main content */
+main {
+	clear: left;
+	padding-left: 30em;
+	padding-right: 30em;
+	border: solid #931420;
+  	border-width: 0 0 1px 0;
+  	padding: 20px;
+}
+main h1 {
+	font-size: 150%;
+	padding: .3em 0;
+	border: 2px double #931420; 
+	border-radius: 10px; 
+	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); 
+	padding: 20px;
+}
+main h2 {
+	color: var(--global-color-1);
+	font-size: 130%;
+	padding: .5em 0 .25em 0;
+}
+main h3 {
+	font-size: 105%;
+	padding-bottom: .25em;
+}
+main img {
+	padding-bottom: 1em;
+}
+main p {
+	padding-bottom: .5em;
+}
+main blockquote {
+	padding: 0 2em;
+	font-style: italic;
+}
+main ul {
+	padding: 0 0 .25em 1.25em;
+}
+main li {
+	padding-bottom: .35em;
+}
+
+/* the styles for the footer */
+footer p {
+	border-bottom: solid #931420;
+	text-align: center;
+	padding: 1em 0;
+	background-color: #931420;
+	color: white;
+	border: solid #931420;
+  	border-width: 0 0 1px 0;
+  	padding: 20px;
+	
+}
