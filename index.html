@@ -3,9 +3,18 @@
 
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>San Joaquin Valley Town Hall</title>
 	<link rel="shortcut icon" href="images/favicon.ico">
-	<link rel="stylesheet" href="styles/c7_main.css">
+	<link rel="stylesheet" href="styles/c9_main.css">
+    <link rel="stylesheet" href="styles/slicknav.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/jquery.slicknav.min.js"></script>
+	<script type="text/javascript">
+    	$(document).ready(function(){
+			$('#nav_menu').slicknav({prependTo:"#mobile_menu"});
+    	});
+    </script>
 </head>
 
 <body>
@@ -13,32 +22,24 @@
 		<img src="images/town_hall_logo.gif" alt="Town Hall logo" height="80">
 		<h2>San Joaquin Valley Town Hall</h2>
 		<h3>Celebrating our <span class="shadow">75<sup>th</sup></span> Year</h3>
-
-		<nav id="nav_menu">
-			<ul>
-				<li><a href="index.html">Home</a></li>
-				<li>
-					<a href="speakers/index.html">Speakers</a>
-					<ul>
-						<li><a href="../town_hall_1/speakers/brancaccio.html">David Brancaccio</a></li>
-						<li><a href="../town_hall_1/speakers/sorkin.html">Andrew Ross Sorkin</a></li>
-						<li><a href="../town_hall_1/speakers/chua.html">Amy Chua</a></li>
-						<li><a href="../town_hall_1/speakers/c7_sampson.html">Scott Sampson</a></li>
-					</ul>
-				</li>
-				<li><a href="luncheons.html">Luncheons</a></li>
-				<li><a href="members.html" class="current">Become a Member</a></li> 
-				<li class="lastitem">
-					<a href="aboutus.html">About Us</a>
-					<ul>
-						<li><a href="history.html">Our History</a></li>
-						<li><a href="board.html">Board of Directors</a></li>
-					</ul>
-				</li>
-			</ul>
-		</nav>
-
 	</header>
+    <nav id="mobile_menu"></nav>
+	<nav id="nav_menu">
+    	<ul>
+        	<li><a href="index.html" class="current">Home</a></li>
+        	<li><a href="speakers.html">Speakers</a></li>
+        	<li><a href="luncheons.html">Luncheons</a></li>
+        	<li><a href="tickets.html">Tickets</a></li>
+        	<li><a href="aboutus.html">About Us</a>
+            	<ul>
+                	<li><a href="#">Our History</a></li>
+                	<li><a href="#">Board of Directors</a></li>
+                	<li><a href="#">Past Speakers</a></li>
+                	<li><a href="#">Contact Information</a></li>
+            	</ul>
+        	</li>
+    	</ul>
+	</nav>
 	<main>
 		<section>
 			<h2>Our Mission</h2>
@@ -48,6 +49,7 @@
 			   and entertain our audience! As one or our members told us:</p>
 			<blockquote>&ldquo;Each year I give a ticket package to each of our family members. 
 			I think of it as the gift of knowledge...and that is priceless.&rdquo;</blockquote>
+			
 			<h1>Speaker of the Month</h1>
 			<article>
 				<h2>Fossil Threads in the Web of Life</h2>
@@ -59,7 +61,10 @@
 				Curator at the Utah Museum of Natural History, steps to the podium. Sampson's research 
 				has focused on the ecology and evolution of late Cretaceous dinosaurs and he has conducted 
 				fieldwork in a number of countries in Africa.</p>
-				<p><a href="speakers/c7_sampson.html">Read more.</a>&nbsp;<b><a href="media/sampson.mp4" target ="_blank">Or play video</a></b></p>
+				<p>
+					<a href="speakers/sampson.html">Read more.</a>&nbsp;
+					<a href="media/sampson.swf" target="_blank">Or play video.</a>
+				</p>
 			</article>
 			
 			<h2>Our Ticket Packages</h2>
@@ -69,17 +74,18 @@
 				<li>Single Speaker: $25</li>
 			</ul>
 		</section>
-		
 		<aside>
 			<h2>Guest speakers</h2>
+			<div id="speakers">
 			<h3>October<br><a href="speakers/brancaccio.html">David Brancaccio</a></h3>
 			<img src="images/brancaccio75.jpg" alt="David Brancaccio photo">
 			<h3>November<br><a href="speakers/sorkin.html">Andrew Ross Sorkin</a></h3>
 			<img src="images/sorkin75.jpg" alt="Andrew Ross Sorkin photo">
 			<h3>January<br><a href="speakers/chua.html">Amy Chua</a></h3>
 			<img src="images/chua75.jpg" alt="Amy Chua photo">
-			<h3>February<br><a href="speakers/c7_sampson.html">Scott Sampson</a></h3>
+			<h3>February<br><a href="speakers/sampson.html">Scott Sampson</a></h3>
 			<img src="images/sampson75.jpg" alt="Scott Sampson photo">
+			</div>
 		</aside>
 	</main>
 	<footer>
