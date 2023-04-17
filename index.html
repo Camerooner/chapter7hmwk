@@ -1,27 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="utf-8">
-<title>San Joaquin Valley Town Hall</title>
-<link rel="shortcut icon" href="images/favicon.ico">
-<link rel="stylesheet" type="text/css" href="styles/normalize.css">
-<link rel="stylesheet" href="styles/speaker.css">
-<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-<script src="javascript/image_swap.js"></script>
+	<meta charset="utf-8">
+	<title>San Joaquin Valley Town Hall</title>
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="stylesheet" href="styles/tickets.css">
 </head>
 
 <body>
-	<header> <img src="images/town_hall_logo.gif" alt="Town Hall logo" height="80">
-    	<h2>San Joaquin Valley Town Hall</h2>
-    	<h3>Celebrating our <span class="shadow">75<sup>th</sup></span> Year</h3>
+	<header>
+		<img src="images/town_hall_logo.gif" alt="Town Hall logo" height="80">
+		<h2>San Joaquin Valley Town Hall</h2>
+		<h3>Celebrating our <span class="shadow">75<sup>th</sup></span> Year</h3>
 	</header>
 	<nav id="nav_menu">
     	<ul>
-        	<li><a href="../index.html">Home</a></li>
+        	<li><a href="index.html" class="current">Home</a></li>
         	<li><a href="speakers.html">Speakers</a></li>
         	<li><a href="luncheons.html">Luncheons</a></li>
         	<li><a href="tickets.html">Tickets</a></li>
-        	<li><a href="aboutus.html"> About Us</a>
+        	<li><a href="aboutus.html">About Us</a>
             	<ul>
                 	<li><a href="#">Our History</a></li>
                 	<li><a href="#">Board of Directors</a></li>
@@ -30,27 +29,118 @@
             	</ul>
         	</li>
     	</ul>
-    </nav>
+	</nav>
 	<main>
 		<section>
-			<h1>jQuery Image Swaps</h1>
-			<ul id="image_list">
-			  <li><a href="images/brancaccio_EEC.jpg" title="David Brancaccio">
-				<img src="images/brancaccio75.jpg" alt=""></a></li>
-			  <li><a href="images/sorkin_desk260.jpg" title="Andrew Ross Sorkin">
-				<img src="images/sorkin75.jpg" alt=""></a></li>
-			  <li><a href="images/chua_220.jpg" title="Amy Chua">
-				<img src="images/chua75.jpg" alt=""></a></li>
-			  <li><a href="images/sampson_dinosaur.jpg" title="Scott Sampson">
-				<img src="images/sampson75.jpg" alt=""></a></li>
-			</ul>
-			<img id="image" src="images/brancaccio_EEC.jpg" alt="David Brancaccio">
-			<p id="caption">David Brancaccio</p> 
-		  </section>
-		  
+			<h1>Order Form</h1>
+    		<form action="register_account.html" method="get"
+        		name="registration_form" id="registration_form">
+    			<fieldset>
+	        		<legend>Membership Information</legend>
+	        		<label for="email">E-Mail:</label>
+	        		<input type="email" name="email" id="email" autofocus required><br>
+    			<!-- </fieldset>
+    			<fieldset>
+        			<legend>Member Information</legend> -->
+        			<label for="first_name">First Name:</label>
+					<input type="text" name="first_name" id="first_name" required><br>
+					<label for="last_name">Last Name:</label>
+					<input type="text" name="last_name" id="last_name" required><br>
+					<label for="address">Address:</label>
+					<input type="text" name="address" id="address"><br>
+					<label for="city">City:</label>
+					<input type="text" name="city" id="city" required><br>
+					<label for="state">State:</label>
+					<input type="text" name="state" id="state" required maxlength="2" placeholder="2-character code"><br>
+					<label for="zip">ZIP Code:</label>
+					<input type="text" name="zip" id="zip" required placeholder="5 or 9 digits" 
+				           pattern="^\d{5}(-\d{4})?$" title="Either 5 or 9 digits"><br>
+					<label for="phone">Phone Number:</label>
+					<input type="tel" name="phone" id="phone" placeholder="999-999-9999" 
+				       	   pattern="\d{3}[\-]\d{3}[\-]\d{4}" title="Must be 999-999-999 format"><br>
+				</fieldset>
+				<fieldset>
+					<legend>Ordering Information</legend>
+					<label for="order_type">Order Type:</label>
+					<select name="order_type" id="order_type">
+				    	<option value="j">Member Package</option>
+				    	<option value="r">Donor Package</option>            
+				    	<option value="c">Single Tickets</option>
+					</select><br>
+					<label for="starting_date">Starting Date:</label>
+					<input type="date" name="starting_date" id="starting_date" required><br>
+					<label for="tickets">Tickets for Guests:</label>
+					<input type="number" name="tickets" id="tickets" value="2" min="1" max="4" placeholder="from 1 to 4"><br>
+				</fieldset>
+				<fieldset id="payment_methods">
+					<legend>Payment Methods</legend>
+					<label for="bill_me">
+						<input type="radio" name="payment_method" id="bill_me" value="bill_me"> Bill Me
+					</label>
+					<label for="credit_card">
+						<input type="radio" name="payment_method" id="credit_card" value="credit_card"> Credit Card
+					</label>
+				</fieldset>
+				<fieldset>
+					<legend>Credit Card Information</legend>
+					<label for="card_type">Card Type:</label>
+					<select name="card_type" id="card_type">
+						<option value="v">Visa</option>
+						<option value="mc">Master Card</option>
+						<option value="d">Discover</option>
+					</select><br>
+					<label for="card_number">Card Number:</label>
+					<input type="text" name="card_number" id="card_number" pattern="\d{16}" title="Card number must be 16 digits" required><br>
+					<label for="expiration_month">Expiration Month:</label>
+					<select name="expiration_month" id="expiration_month">
+						<option value="">--Select Month--</option>
+						<option value="01">January</option>
+						<option value="02">February</option>
+						<option value="03">March</option>
+						<option value="04">April</option>
+						<option value="05">May</option>
+						<option value="06">June</option>
+						<option value="07">July</option>
+						<option value="08">August</option>
+						<option value="09">September</option>
+						<option value="10">October</option>
+						<option value="11">November</option>
+						<option value="12">December</option>
+					</select><br>
+					<label for="expiration_year">Expiration Year:</label>
+					<select name="expiration_year" id="expiration_year">
+						<option value="">--Select Year--</option>
+						<option value="2023">2023</option>
+						<option value="2024">2024</option>
+						<option value="2025">2025</option>
+						<option value="2026">2026</option>
+						<option value="2027">2027</option>
+						<option value="2028">2028</option>
+					</select><br>
+				</fieldset>
+				
+				<fieldset id="buttons">
+					<legend>Submit Your Order</legend>
+					<label>&nbsp;</label>
+					<input type="submit" id="submit" value="Submit">
+					<input type="reset" id="reset" value="Reset Fields"><br>
+				</fieldset>
+			</form>
+		</section>
+		<aside>
+			<h2>Guest speakers</h2>
+			<h3>October<br><a href="speakers/brancaccio.html">David Brancaccio</a></h3>
+			<img src="images/brancaccio75.jpg" alt="David Brancaccio photo">
+			<h3>November<br><a href="speakers/sorkin.html">Andrew Ross Sorkin</a></h3>
+			<img src="images/sorkin75.jpg" alt="Andrew Ross Sorkin photo">
+			<h3>January<br><a href="speakers/chua.html">Amy Chua</a></h3>
+			<img src="images/chua75.jpg" alt="Amy Chua photo">
+			<h3>February<br><a href="speakers/c7_sampson.html">Scott Sampson</a></h3>
+			<img src="images/sampson75.jpg" alt="Scott Sampson photo">
+		</aside>
 	</main>
 	<footer>
-  		<p>&copy; 2021, San Joaquin Valley Town Hall, Fresno, CA 93755</p>
+		<p>&copy; 2022, San Joaquin Valley Town Hall, Fresno, CA 93755</p>
 	</footer>
 </body>
 </html>
