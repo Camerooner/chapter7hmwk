@@ -11,7 +11,7 @@ body {
     font-size: 100%;
     width: 800px;
     margin: 0 auto;
-    border: 3px solid #931420;
+    border: 3px solid #800000;
     background-color: #fffded;
 }
 a:focus, a:hover {
@@ -21,7 +21,7 @@ a:focus, a:hover {
 header {
 	padding: 1.5em 0 2em 0;
 	border-bottom: 3px solid #931420;
-		background-image: -moz-linear-gradient(
+	background-image: -moz-linear-gradient(
 	    30deg, #f6bb73 0%, #f6bb73 30%, white 50%, #f6bb73 80%, #f6bb73 100%);
 	background-image: -webkit-linear-gradient(
 	    30deg, #f6bb73 0%, #fffded 30%, white 50%, #fffded 80%, #f6bb73 100%);
@@ -45,6 +45,59 @@ header img {
 .shadow {
 	text-shadow: 2px 2px 2px #800000;
 }
+/* the styles for the form */
+fieldset {
+    margin-bottom: 1em;
+    padding-top: .5em;
+}
+legend {
+    color: black;
+    font-weight: bold;
+    font-size: 85%;
+    margin-bottom: .5em;
+}
+label {
+    float: left;
+    width: 12em;
+    text-align: right;
+}
+label, input, select {
+	font-size: 90%;
+}
+input, select {
+    width: 15em;
+    margin-left: .5em;
+    margin-bottom: .5em;
+}
+input:required, input[required] {
+	border: 3px solid red;
+}
+input:valid {
+	border: 1px solid black;
+}
+input:invalid {
+	border: 2px solid #800000;
+	box-shadow: none;
+}
+
+#payment_methods label {
+	display: inline-block;
+	vertical-align: top;
+	margin-right: 20px;
+	margin-bottom: 10px;
+  }
+  
+
+#payment_methods input[type="radio"] {
+    margin-right: 5px;
+}
+
+br {
+    clear: both;
+}
+#buttons input {
+	width: 10em;
+}
 /* the styles for the navigation menu */
 #nav_menu ul {
 	list-style-type: none;
@@ -65,6 +118,9 @@ header img {
     color: white;
     font-weight: bold;
 }
+#nav_menu a.current {
+	color: yellow;
+}
 #nav_menu ul ul {
     display: none;
     position: absolute;
@@ -81,6 +137,7 @@ header img {
     clear: both;
     display: block;
 }
+
 /* the styles for the main content */
 main {
 	clear: left;
@@ -93,37 +150,10 @@ section {
 	padding: 0 20px 20px 20px;
 }
 section h1 {
-	color: #800000;
 	font-size: 150%;
-	padding-top: .5em;
+	color: #800000;
+	padding: .5em 0 .25em 0;
 	margin: 0;
-}
-section p {
-	padding-bottom: .5em;
-}
-section blockquote {
-	padding: 0 2em;
-	font-style: italic;
-}
-section ul {
-	padding: 0 0 .25em 1.25em;
-}
-section li {
-	padding-bottom: .35em;
-}
-
-/* the styles for the article */
-article {
-	padding: .5em 0;
-}
-article h2 {
-	font-size: 115%;
-	padding: 0 0 .25em 0;
-}
-article img {
-	float: right;
-	margin: .5em 0 1em 1em;
-	border: 1px solid black;
 }
 
 /* the styles for the aside */
@@ -150,7 +180,6 @@ aside img {
 footer {
 	background-color: #931420;
 	clear: both;
-
 }
 footer p {
 	text-align: center;

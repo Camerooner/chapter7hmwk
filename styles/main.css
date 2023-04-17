@@ -8,10 +8,10 @@ html {
 }
 body {
 	font-family: Arial, Helvetica, sans-serif;
-    font-size: 87.5%;
+    font-size: 100%;
     width: 800px;
     margin: 0 auto;
-    border: 3px solid #800000;
+    border: 3px solid #931420;
     background-color: #fffded;
 }
 a:focus, a:hover {
@@ -21,7 +21,7 @@ a:focus, a:hover {
 header {
 	padding: 1.5em 0 2em 0;
 	border-bottom: 3px solid #931420;
-	background-image: -moz-linear-gradient(
+		background-image: -moz-linear-gradient(
 	    30deg, #f6bb73 0%, #f6bb73 30%, white 50%, #f6bb73 80%, #f6bb73 100%);
 	background-image: -webkit-linear-gradient(
 	    30deg, #f6bb73 0%, #fffded 30%, white 50%, #fffded 80%, #f6bb73 100%);
@@ -84,11 +84,11 @@ header img {
     clear: both;
     display: block;
 }
-
 /* the styles for the main content */
 main {
 	clear: left;
 }
+
 /* the styles for the section */
 section {
 	width: 525px;
@@ -98,7 +98,7 @@ section {
 section h1 {
 	font-size: 150%;
 	padding: .5em 0 .25em 0;
-	margin: 0;               /* If you remove this, the margins in normalize.css will be applied. */
+	margin: 0;
 }
 section h2 {
 	color: #800000;
@@ -114,6 +114,7 @@ section blockquote {
 }
 section ul {
 	padding: 0 0 .25em 1.25em;
+	list-style-type: circle;
 }
 section li {
 	padding-bottom: .35em;
